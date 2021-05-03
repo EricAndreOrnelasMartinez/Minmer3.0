@@ -133,5 +133,5 @@ session_start();
     </table>
 </section>
 </body>
-<script src="cdmx.js"></script>
+<script src="tables.js"></script>
 </html>
