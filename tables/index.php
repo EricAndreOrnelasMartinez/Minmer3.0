@@ -56,6 +56,7 @@ session_start();
     <table id="main">
         <thead>
             <tr>
+                <td>Evidencia</td>
                 <td>ID SQL</td>
                 <td>Fecha de carga</td>
                 <td>Fecha de entrega</td>
@@ -95,6 +96,7 @@ session_start();
         while($show = mysqli_fetch_array($ans)){
         ?>
         <tr>
+            <td><a href="./Evidencias/<?php echo $show['Factura'] ?>.pdf">Ir</a></td>
             <td><?php echo $show['ID_SQL'] ?></td>
             <td><?php echo $show['FechaC'] ?></td>
             <td><?php echo $show['FechaE'] ?></td>
