@@ -1,10 +1,8 @@
 <?php 
 $city = $_GET['city'];
-echo $city;
-
 ?>
 <?php 
-$con = mysqli_connect("localhost","root","Lasric.2018","Minmer2");
+require_once('../PHP/dbcon.php');
 session_start();
 ?>
 <!DOCTYPE html>
