@@ -12,11 +12,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/cssforcitys.css">
-    <title id="title"><?php $city  ?></title>
-    <script>
-        const title = document.getElementById('title')
-        title.InnerHTML = title.InnerHTML.toUpperCase()
-    </script>
+    <title id="title"><?php echo  strtoupper($city);  ?></title>
 </head>
 <body>
     <header>
