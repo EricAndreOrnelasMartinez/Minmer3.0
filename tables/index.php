@@ -84,7 +84,7 @@ session_start();
                 if($aux > 5){
                     ?>
                     <td><a href="../Nuevo/"><button type="button">Nuevo</button></a></td>
-                    <td><a href="../uploadsE/">Subir Evidencia</a></td>
+                    <td><a href="../uploadE/">Subir Evidencia</a></td>
                     <?php
                 }
                 ?>
@@ -173,7 +173,7 @@ session_start();
             }
         ?>
         <tr class="<?php echo $color ?>">
-            <td><a href="./Evidencias/<?php echo $show['Factura'] ?>.pdf">Ir</a></td>
+            <td><a href="../uploadsE/uploads/<?php echo $show['Factura'] ?>.pdf">Ir</a></td>
             <td><?php echo $total ?>%</td>
             <td><?php echo $show['ID_SQL'] ?></td>
             <td><?php echo $show['FechaC'] ?></td>
