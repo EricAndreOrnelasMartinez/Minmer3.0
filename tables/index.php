@@ -173,7 +173,7 @@ session_start();
             }
         ?>
         <tr class="<?php echo $color ?>">
-            <td><a href="../uploadsE/uploads/<?php echo $show['Factura'] ?>.pdf">Ir</a></td>
+            <td><a href="../uploadE/uploads/<?php echo $show['Factura'] ?>.pdf">Ir</a></td>
             <td><?php echo $total ?>%</td>
             <td><?php echo $show['ID_SQL'] ?></td>
             <td><?php echo $show['FechaC'] ?></td>
