@@ -200,9 +200,9 @@ session_start();
             $aux = $_SESSION['nivel'];
             if($aux == 5 || $aux == 6){ 
             ?>
-             <td><a href="../Editar/?ids=<?php echo $show['ID_SQL']; ?>&city=<?php $city ?>"><button type="button" class="btn btn-succes">Modificar</button></a></td>
-             <td><a href="../PHP/delete.php?id=<?php echo $show['ID_SQL'] ?>&city=<?php $city ?>"><button type="button">Eliminar</button></a></td>
-             <td><a href="../PHP/terminar.php?id=<?php echo $show['ID_SQL'] ?>&city=<?php $city ?>"><button type="button">Terminar</button></a></td>
+             <td><a href="../Editar/?ids=<?php echo $show['ID_SQL']; ?>&city=<?php echo $city ?>"><button type="button" class="btn btn-succes">Modificar</button></a></td>
+             <td><a href="../PHP/delete.php?id=<?php echo $show['ID_SQL'] ?>&city=<?php echo $city ?>"><button type="button">Eliminar</button></a></td>
+             <td><a href="../PHP/terminar.php?id=<?php echo $show['ID_SQL'] ?>&city=<?php echo $city ?>"><button type="button">Terminar</button></a></td>
             <?php
             }else{
                 continue;
