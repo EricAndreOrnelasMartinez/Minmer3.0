@@ -56,10 +56,6 @@ tr:nth-child(even){
 	background-color: #ddd;
 }
 
-tr:hover td{
-	background-color:rgb(36, 36, 100);
-	color: white;
-}
 section{
     padding-top: 6rem;
 }

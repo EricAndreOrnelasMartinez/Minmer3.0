@@ -93,7 +93,7 @@ session_start();
         </thead>
         <?php
         function validation($var){
-            return !empty(implode($var));
+            return !empty($var);
         }
         $sql = "SELECT * FROM $city";
         $ans = mysqli_query($con,$sql);
