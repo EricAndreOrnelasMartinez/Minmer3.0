@@ -101,67 +101,67 @@ session_start();
         while($show = mysqli_fetch_array($ans)){
             $total = 0; 
             if(validation($show['ID_SQL'])){
-                $total = 5;
+                $total = $total + 5;
             }
             if(validation($show['FechaC'])){
-                $total = 10;
+                $total = $total + 5;
             }
             if(validation($show['FechaE'])){
-                $total = 15;
+                $total = $total + 5;
             }
             if(validation($show['Operador'])){
-                $total = 20;
+                $total = $total + 5;
             }
             if(validation($show['Placas'])){
-                $total = 25;
+                $total = $total + 5;
             }
             if(validation($show['ID'])){
-                $total = 30;
+                $total = $total + 5;
             }
             if(validation($show['SO'])){
-                $total = 35;
+                $total = $total + 5;
             }
             if(validation($show['Factura'])){
-                $total = 40;
+                $total = $total + 5;
             }
             if(validation($show['Cliente'])){
-                $total = 45;
+                $total = $total + 5;
             }
             if(validation($show['PZS'])){
-                $total = 50;
+                $total = $total + 5;
             }
             if(validation($show['Caja'])){
-                $total = 55;
+                $total = $total + 5;
             }
             if(validation($show['Subtotal'])){
-                $total = 60;
+                $total = $total + 5;
             }
             if(validation($show['Horario'])){
-                $total = 65;
+                $total = $total + 5;
             }
             if(validation($show['Direccion'])){
-                $total = 70;
+                $total = $total + 5;
             }
             if(validation($show['Destino'])){
-                $total = 75;
+                $total = $total + 5;
             }
             if(validation($show['Concepto'])){
-                $total = 80;
+                $total = $total + 5;
             }
             if(validation($show['Capacidad'])){
-                $total = 85;
+                $total = $total + 5;
             }
             if(validation($show['Observaciones'])){
-                $total = 90;
+                $total = $total + 5;
             }
             if(validation($show['OE'])){
-                $total = 95;
+                $total = $total + 5;
             }
             if(validation($show['Custodia'])){
-                $total = 97;
+                $total = $total + 2;
             }
             if($show['Terminado'] > 0){
-                $total = 100;
+                $total = $total + 3;
             }
             $color = "red";
             if ( $total < 80 ){
