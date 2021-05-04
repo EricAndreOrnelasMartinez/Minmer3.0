@@ -84,6 +84,7 @@ session_start();
                 if($aux > 5){
                     ?>
                     <td><a href="../Nuevo/"><button type="button">Nuevo</button></a></td>
+                    <td><a href="./uploadsE/">Subir Evidencia</a></td>
                     <?php
                 }
                 ?>
