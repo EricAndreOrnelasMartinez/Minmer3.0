@@ -163,7 +163,7 @@ session_start();
                 $total = 100;
             }
             $color = "red";
-            if ( $total < 70 ){
+            if ( $total < 80 ){
                 $color = "red";
             } elseif ($total < 99){
                 $color = "yellow";
