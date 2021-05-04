@@ -11,7 +11,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/cssforcitys.css">
+    <link rel="stylesheet" href="../CSS/cssforcitis.css">
     <title id="title"><?php echo  strtoupper($city);  ?></title>
 </head>
 <body>
@@ -57,6 +57,7 @@ session_start();
         <thead>
             <tr>
                 <td>Evidencia</td>
+                <td>Progreso</td>
                 <td>ID SQL</td>
                 <td>Fecha de carga</td>
                 <td>Fecha de entrega</td>
@@ -91,12 +92,88 @@ session_start();
             </tr>
         </thead>
         <?php
+        function validation($var){
+            return !empty(implode($var));
+        }
         $sql = "SELECT * FROM $city";
         $ans = mysqli_query($con,$sql);
         while($show = mysqli_fetch_array($ans)){
+            $total = 0; 
+            if(validation($show['ID_SQL'])){
+                $total = 5;
+            }
+            if(validation($show['FechaC'])){
+                $total = 10;
+            }
+            if(validation($show['FechaE'])){
+                $total = 15;
+            }
+            if(validation($show['Operador'])){
+                $total = 20;
+            }
+            if(validation($show['Placas'])){
+                $total = 25;
+            }
+            if(validation($show['ID'])){
+                $total = 30;
+            }
+            if(validation($show['SO'])){
+                $total = 35;
+            }
+            if(validation($show['Factura'])){
+                $total = 40;
+            }
+            if(validation($show['Cliente'])){
+                $total = 45;
+            }
+            if(validation($show['PZS'])){
+                $total = 50;
+            }
+            if(validation($show['Caja'])){
+                $total = 55;
+            }
+            if(validation($show['Subtotal'])){
+                $total = 60;
+            }
+            if(validation($show['Horario'])){
+                $total = 65;
+            }
+            if(validation($show['Direccion'])){
+                $total = 70;
+            }
+            if(validation($show['Destino'])){
+                $total = 75;
+            }
+            if(validation($show['Concepto'])){
+                $total = 80;
+            }
+            if(validation($show['Capacidad'])){
+                $total = 85;
+            }
+            if(validation($show['Observaciones'])){
+                $total = 90;
+            }
+            if(validation($show['OE'])){
+                $total = 95;
+            }
+            if(validation($show['Custodia'])){
+                $total = 97;
+            }
+            if($show['Terminado'] > 0){
+                $total = 100;
+            }
+            $color = "red";
+            if ( $total < 70 ){
+                $color = "red";
+            } elseif ($total < 99){
+                $color = "yellow";
+            } elseif ($total === 100){
+                $color = "green";
+            }
         ?>
-        <tr>
+        <tr class="<?php echo $color ?>">
             <td><a href="./Evidencias/<?php echo $show['Factura'] ?>.pdf">Ir</a></td>
+            <td><?php echo $total ?>%</td>
             <td><?php echo $show['ID_SQL'] ?></td>
             <td><?php echo $show['FechaC'] ?></td>
             <td><?php echo $show['FechaE'] ?></td>
