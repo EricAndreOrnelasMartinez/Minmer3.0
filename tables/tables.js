@@ -17,6 +17,9 @@ function deleteP(id, city){
     if(aux){
         fetch('../PHP/delete.php', {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(data)
         })
         .then(res => res.json())
