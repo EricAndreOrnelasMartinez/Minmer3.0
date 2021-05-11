@@ -12,7 +12,7 @@ fetch('../PHP/sessioncheck.php')
 
 function deleteP(id, city){
     let aux = confirm('¿Desea eliminar el proceso?')
-    let data = {id : id, city:  city}
+    let data = {id,city}
     console.log(data)
     if(aux){
         fetch('../PHP/delete.php', {
