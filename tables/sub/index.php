@@ -59,6 +59,7 @@ $id = $_GET['id'];
         function validation($var){
             return !empty($var);
         }
+        $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
         $sql = "SELECT * FROM subP WHERE City='$city' AND ID_SQL=$id";
         $ans = mysqli_query($con,$sql);
         while($show = mysqli_fetch_array($ans)){
