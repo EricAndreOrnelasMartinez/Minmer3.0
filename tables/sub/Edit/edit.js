@@ -1,5 +1,5 @@
 const form = document.getElementById('data')
-const h3 = document.getElementById('res')
+const h3 = document.getElementsByClassName('eliminar')
 
 form.addEventListener('submit', e =>{
     e.preventDefault()

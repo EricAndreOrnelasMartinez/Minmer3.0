@@ -1,5 +1,5 @@
 const table = document.getElementById('main');
-const button1 = document.getElementById('eliminar')
+const button1 = document.getElementsByClassName('eliminar')
 fetch('../PHP/sessioncheck.php')
 .then(res => res.json())
 .then(ans =>{
