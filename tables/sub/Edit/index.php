@@ -2,7 +2,7 @@
     $con = mysqli_connect("localhost","root","Lasric.2018","Minmer2");
     $tem_id = round($_GET['id']);
     $idu = $_GET['idu'];
-    $city = $_GET['city'];
+    $city = 'subP';
     $sqlFC = "SELECT FechaC FROM $city WHERE ID_SQL=".$tem_id." AND ID_sub=$idu";
     $resultFC = mysqli_query($con,$sqlFC);
     $sqlFE = "SELECT FechaE FROM $city WHERE ID_SQL=".$tem_id."  AND ID_sub=$idu";
