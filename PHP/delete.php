@@ -1,9 +1,7 @@
 <?php 
 require_once('dbcon.php');
-$id = $_GET['id'];
-$city = $_GET['city'];
-echo $id;
-echo $city;
+$id = $_POST['id'];
+$city = $_POST['city'];
 $sql = "DELETE FROM $city WHERE ID_SQL=$id"; 
 $res = mysqli_query($con, $sql);
 if($res){

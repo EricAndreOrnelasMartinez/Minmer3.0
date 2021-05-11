@@ -17,7 +17,7 @@ function deleteP(id, city){
     if(aux){
         fetch('../PHP/delete.php', {
             method: 'POST',
-            body: data
+            body: JSON.stringify(data)
         })
         .then(res => res.json())
         .then(dataF => {
