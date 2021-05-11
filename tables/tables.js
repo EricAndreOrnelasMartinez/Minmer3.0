@@ -13,12 +13,10 @@ fetch('../PHP/sessioncheck.php')
 function deleteP(id, city){
     let aux = confirm('¿Desea eliminar el proceso?')
     let data = {id,city}
-    let dataA = new FormData(data)
-    console.log(data)
     if(aux){
         fetch('../PHP/delete.php', {
             method: 'POST',
-            body: dataA
+            body: data
         })
         .then(res => res.json())
         .then(dataF => {
