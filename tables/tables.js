@@ -10,9 +10,8 @@ fetch('../PHP/sessioncheck.php')
     }
 })
 
-button1.addEventListener('click', e=>{
-    e.preventDefault()
+function deleteP(id){
     let aux = confirm('¿Desea eliminar el proceso?')
     console.log(aux)
-    console.log(button1.getAttribute('value'))
-})
+    console.log(id)
+}

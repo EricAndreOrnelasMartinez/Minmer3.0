@@ -201,7 +201,7 @@ session_start();
             if($aux == 5 || $aux == 6){ 
             ?>
              <td><a href="../Editar/?ids=<?php echo $show['ID_SQL']; ?>&city=<?php echo $city ?>"><button type="button" class="btn btn-succes">Modificar</button></a></td>
-             <td><button type="button" class="eliminar" value="soy button1">Eliminar</button></td>
+             <td><button type="button" onclick="deleteP(<?php echo $show['ID_SQL'] ?>)" >Eliminar</button></td>
              <td><button type="button" class="terminar" value="soy botton2">Terminar</button></td>
             <?php
             }else{
