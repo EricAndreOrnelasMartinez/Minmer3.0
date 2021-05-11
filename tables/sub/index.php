@@ -12,7 +12,7 @@ $id = $_GET['id'];
 </head>
 <body>
     <button type="button"><a href="../?city=CDMX">Volver</a></button>
-    <button type="button"><a href="./Nuevo/">Nuevo</a></button>
+    <button type="button"><a href="./Nuevo/?city=<?php echo $city ?>&id=<?php echo $id ?>">Nuevo</a></button>
     <section>
     <table id="main">
         <thead>
