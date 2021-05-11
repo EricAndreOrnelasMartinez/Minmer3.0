@@ -11,6 +11,7 @@
 <form enctype="multipart/form-data" method="post">
         Subir Evidencia PDF: <input type="file" name="myfile">
         <input type="submit" value="Subir">
+        <button type="button"><a href="../tables/?city=CDMX">Volver</a></button>
     </form>
 </body>
 </html>

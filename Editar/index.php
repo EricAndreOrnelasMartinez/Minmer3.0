@@ -81,7 +81,7 @@
     <input type="submit" value="Guardar">  
     <?php }; 
     ?>
-    <a href="../CDMX/"><button type="button">Volver</button></a>  
+    <a href="../tables/?city=CDMX"><button type="button">Volver</button></a>  
     <h3 id="res"></h3>
 </form>
 <script src="editar.js"></script>

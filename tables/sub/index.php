@@ -1,9 +1,6 @@
 <?php 
 $city = $_GET['city'];
-?>
-<?php 
-require_once('../PHP/dbcon.php');
-session_start();
+$id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,47 +8,11 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/cssforcitis.css">
-    <title id="title"><?php echo  strtoupper($city);  ?></title>
+    <title>Subproceso - <?php echo $city ?></title>
 </head>
 <body>
-    <header>
-    <nav class="menu">
-        <ul id="menu">
-            <?php
-            session_start();
-            $aux = $_SESSION['nivel'];
-            if($aux >= 5){
-                ?>
-                <li><a href="./?city=CDMX">CDMX</a></li>
-                <li><a href="./?city=GDL">GDL</a></li>
-                <li><a href="./?city=MTY">MTY</a></li>
-                <li><a href="./?city=CUN">CUN</a></li>
-                <li><a href="./?city=SJD">SJD</a></li>
-                <li><a href="./?city=QRO">QRO</a></li>
-                <li><a href="../logout.php">Log out</a></li>
-                <li><a href="../Buscar/">Buscar</a></li>
-                <li><a href="../Newuser/">Nuevo usuario</a></li>
-                <li><a href="../Modificaciones/">Modificaciones</a></li>
-                <?php
-            }else if($aux <= 5 && $aux >= 3){
-                ?>
-                <li><a href="./?city=CDMX">CDMX</a></li>
-                <li><a href="./?city=GDL">GDL</a></li>
-                <li><a href="./?city=MTY">MTY</a></li>
-                <li><a href="./?city=CUN">CUN</a></li>
-                <li><a href="./?city=SJD">SJD</a></li>
-                <li><a href="./?city=QRO">QRO</a></li>
-                <li><a href="../logout.php">Log out</a></li>
-                <li><a href="../Buscar/">Buscar</a></li>
-                <?php
-            }else{
-                header("Location:../Buscar/");
-            }
-            ?>
-        </ul>
-    </nav>
-    </header>
+    <button type="button"><a href="../?city=CDMX">Volver</a></button>
+    <button type="button"><a href="./Nuevo/">Nuevo</a></button>
     <section>
     <table id="main">
         <thead>
@@ -83,7 +44,7 @@ session_start();
                 $aux = $_SESSION['nivel'];
                 if($aux > 5){
                     ?>
-                    <td><a href="../Nuevo/"><button type="button">Nuevo</button></a></td>
+                    <td><a href="./Nuevo/?city=<?php echo $city ?>&id=<?php echo $id ?>"><button type="button">Nuevo</button></a></td>
                     <td><a href="../uploadE/">Subir Evidencia</a></td>
                     <?php
                 }
@@ -96,7 +57,7 @@ session_start();
         function validation($var){
             return !empty($var);
         }
-        $sql = "SELECT * FROM $city";
+        $sql = "SELECT * FROM subP WHERE city='$city' AND ID_SQL=$id";
         $ans = mysqli_query($con,$sql);
         while($show = mysqli_fetch_array($ans)){
             $total = 0; 
@@ -208,11 +169,9 @@ session_start();
                 continue;
             }
             ?>
-            <td><a href="./sub/?id=<?php echo $show['ID_SQL'] ?>&city=<?php echo $city ?>">SubProcesos</a></td>
         </tr>
         <?php }?>
     </table>
 </section>
 </body>
-<script src="tables.js"></script>
 </html>
