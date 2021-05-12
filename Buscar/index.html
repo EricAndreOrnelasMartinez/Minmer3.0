@@ -16,16 +16,16 @@
             <option value="SJD">SJD</option>
             <option value="QRO">QRO</option>
         </select>
-        <seLect name="atribute" onchange="" >
+        <seLect name="atribute" id="atribute" >
             <option value="ID_SQL">Identificador</option>
             <option value="Placas">Placas</option>
             <option value="Operador">Operador</option>
             <option value="Fecha">Fecha</option>
         </seLect>
-        <input type="text" name="query" placeholder="Buscar">
-        <input type="hidden" name="query2">
+        <input type="text" name="query" placeholder="Buscar" id="query">
+        <input type="hidden" name="query2" id="query2">
         <input type="submit" value="Buscar">
-        <a href="../CDMX/"><button  type="button">Volver</button></a>
+        <a href="../tables/?city=CDMX"><button  type="button">Volver</button></a>
         <a href="../logout.php"><button type="button">Logout</button></a>
     </form>
     <table id="table"></table>

@@ -1,6 +1,9 @@
 const form = document.getElementById('main');
 const table = document.getElementById('table')
 const h2 = document.getElementById('res')
+const select = document.getElementById('atribute')
+const query = document.getElementById('query')
+const query2 = document.getElementById('query2')
 fetch('../PHP/sessioncheck.php')
 .then(res => res.json())
 .then(ans =>{
@@ -152,6 +155,11 @@ form.addEventListener('submit', e  =>{
     h2.innerHTML = 'No encontrado'
 }
 })
+})
+
+select.addEventListener('onchange', e=>{
+    let aux = select.innerText
+    console.log(aux)
 })
 
 function isNotEmpty(aux){

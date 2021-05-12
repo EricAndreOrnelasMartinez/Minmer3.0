@@ -58,8 +58,8 @@ function hasA($string){
     OE: <input type="text" name="OE">
     Custodia: <input type="text" name="Custodia">
     <input type="submit" value="Guardar">
-    <h3 id="res"></h3>
     <a href="../tables/?city=CDMX"><button type="button">Regresar</button></a>
+    <h3 id="res"></h3>
     </form>
     <form enctype="multipart/form-data" method="post">
         Subir registro exel: <input type="file" name="myfile">
