@@ -26,7 +26,7 @@ form.addEventListener('submit', e =>{
         if(aux === '1'){
             h3.innerHTML = 'Operación completada con éxito'
             h3.className = 'ok'
-            window.location.reload();
+            form.reset()
         }else if(aux === '0'){
             h3.innerHTML = 'Error al capturar los datos'
             h3.className = 'bad'

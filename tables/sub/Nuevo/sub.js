@@ -11,7 +11,11 @@ form.addEventListener('submit', e =>{
     .then(res => res.json())
     .then(dataR =>{
         if(dataR === '1'){
-            window.location.assign('../')
+            cleandata()
         }
     })
 })
+
+function cleandata(){
+    form.reset()
+}
