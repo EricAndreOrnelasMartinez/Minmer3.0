@@ -96,7 +96,11 @@ session_start();
         function validation($var){
             return !empty($var);
         }
-        $sql = "SELECT * FROM $city";
+        $mail = $_SESSION['mail'];
+        $sqlP = "SELECT rowN FROM users WHERE Mail=$mail";
+        $resSql = mysqli_query($con, $sqlP);
+        $auxSQL = implode(mysqli_fetch_assoc($resSql));
+        $sql = "SELECT * FROM $city ORDER BY ID_SQL DESC LIMIT $auxSQL";
         $ans = mysqli_query($con,$sql);
         while($show = mysqli_fetch_array($ans)){
             $total = 0; 
