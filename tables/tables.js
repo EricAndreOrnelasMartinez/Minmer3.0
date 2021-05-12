@@ -13,6 +13,7 @@ fetch('../PHP/sessioncheck.php')
 function deleteP(id){
     let form = document.getElementById(id)
     let data = new FormData(form)
+    console.log(data.get('city'))
     let aux = confirm('¿Desea eliminar el proceso?')
     if(aux){
         fetch('../PHP/delete.php', {
