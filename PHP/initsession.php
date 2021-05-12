@@ -11,7 +11,10 @@ if(!empty($mail) && !empty($pass)){
             session_start();
             $sqlnivel = "SELECT Nivel FROM users WHERE Mail='$mail'";
             $resnivel = mysqli_query($con, $sqlnivel);
+            $sqlrow = "SELECT rowN FROM users WHERE Mail='$mail'";
+            $resRow = mysqli_query($con, $sqlrow);
             $_SESSION['nivel'] = implode(mysqli_fetch_assoc($resnivel));
+            $_SESSION['rowN'] = implode(mysqli_fetch_assoc($resRow));
             $_SESSION['mail'] = $mail;
             echo json_encode('1');
         }else{

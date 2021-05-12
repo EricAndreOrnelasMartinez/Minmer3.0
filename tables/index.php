@@ -5,7 +5,6 @@ ini_set('display_errors','1');
 ?>
 <?php 
 require_once('../PHP/dbcon.php');
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +22,7 @@ session_start();
             <?php
             session_start();
             $aux = $_SESSION['nivel'];
+            $rowN = $_SESSION['rowN'];
             if($aux >= 5){
                 ?>
                 <li><a href="./?city=CDMX">CDMX</a></li>
@@ -98,11 +98,7 @@ session_start();
         function validation($var){
             return !empty($var);
         }
-        $mail = $_SESSION['mail'];
-        $sqlP = "SELECT rowN FROM users WHERE Mail=$mail";
-        $resSql = mysqli_query($con, $sqlP);
-        $auxSQL = implode(mysqli_fetch_assoc($resSql));
-        $sql = "SELECT * FROM $city ORDER BY ID_SQL DESC LIMIT $auxSQL";
+        $sql = "SELECT * FROM $city ORDER BY ID_SQL DESC LIMIT $rowN";
         $ans = mysqli_query($con,$sql);
         while($show = mysqli_fetch_array($ans)){
             $total = 0; 
