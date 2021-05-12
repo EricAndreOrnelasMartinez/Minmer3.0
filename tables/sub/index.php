@@ -171,7 +171,7 @@ $id = $_GET['id'];
              <input type="hidden" name="city" value="<?php echo $city ?>">
              <input type="hidden" name="idu" value="<?php echo $show['ID_sub'] ?>">
              </form> </td>
-             <td><button type="button"onclick="deleteP('<?php echo $show['ID_sub'] ?>T')">Terminar</button> <form id="<?php echo $show['ID_sub']?>T">
+             <td><button type="button"onclick="finishP('<?php echo $show['ID_sub'] ?>T')">Terminar</button> <form id="<?php echo $show['ID_sub']?>T">
              <input type="hidden" name="idu" value="<?php echo $show['ID_sub'] ?>">
              </form> </td>
             <?php
