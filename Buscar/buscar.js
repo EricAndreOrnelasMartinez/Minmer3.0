@@ -157,10 +157,10 @@ form.addEventListener('submit', e  =>{
 })
 })
 
-select.addEventListener('onchange', e=>{
-    let aux = select.innerText
-    console.log(aux)
-})
+function querySelection(){
+    let aux1 = select.innerText
+    console.log(aux1)
+}
 
 function isNotEmpty(aux){
     let forReturn
