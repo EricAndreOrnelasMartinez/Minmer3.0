@@ -165,8 +165,12 @@ $id = $_GET['id'];
             $aux = $_SESSION['nivel'];
             if($aux == 5 || $aux == 6){ 
             ?>
-             <td><a href="./Edit/?id=<?php echo $show['ID_SQL']; ?>&city=<?php echo $city ?>&idu=<?php echo $show['ID_sub'] ?>"><button type="button" class="btn btn-succes">Modificar</button></a></td>
-             <td><a href="../PHP/delete.php?id=<?php echo $show['ID_SQL'] ?>&city=<?php echo $city ?>"><button type="button">Eliminar</button></a></td>
+             <td><a href="./Edit/?id=<?php echo $show['ID_sub']; ?>&city=<?php echo $city ?>&idu=<?php echo $show['ID_sub'] ?>"><button type="button" class="btn btn-succes">Modificar</button></a></td>
+             <td><<button type="button" onclick="deleteP(<?php echo $show['ID_sub'] ?>)">Eliminar</button> <form id="<?php echo $show['ID_sub']?>">
+             <input type="hidden" name="id" value="<?php echo $show['ID_SQL'] ?>">
+             <input type="hidden" name="city" value="<?php echo $city ?>">
+             <input type="hidden" name="idu" value="<?php echo $show['ID_sub'] ?>">
+             </form> </td>
              <td><a href="../PHP/terminar.php?id=<?php echo $show['ID_SQL'] ?>&city=<?php echo $city ?>"><button type="button">Terminar</button></a></td>
             <?php
             }else{

@@ -1,7 +1,5 @@
 <?php 
 $city = $_GET['city'];
-error_reporting(E_ALL);
-ini_set('display_errors','1');
 ?>
 <?php 
 require_once('../PHP/dbcon.php');
@@ -81,7 +79,7 @@ require_once('../PHP/dbcon.php');
                 <td>OE</td>
                 <td>Custodia</td>
                 <td>Terminado</td>
-                <?php session_start();
+                <?php 
                 $aux = $_SESSION['nivel'];
                 if($aux > 5){
                     ?>
