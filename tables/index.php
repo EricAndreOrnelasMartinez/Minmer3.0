@@ -202,8 +202,8 @@ session_start();
             ?>
              <td><a href="../Editar/?ids=<?php echo $show['ID_SQL']; ?>&city=<?php echo $city ?>"><button type="button" class="btn btn-succes">Modificar</button></a></td>
              <td><button type="button" onclick="deleteP(<?php echo $show['ID_SQL'] ?>)">Eliminar</button> <form id="<?php echo $show['ID_SQL'] ?>">
-             <input type="hidden" name="id" value="<? echo $show['ID_SQL']?>">
-             <input type="hidden" name="city" value="<?echo $city ?>">
+             <input type="hidden" name="id" value="<?php echo $show['ID_SQL']?>">
+             <input type="hidden" name="city" value="<?php echo $city ?>">
              </form> </td>
              <td><button type="button" class="terminar" value="soy botton2">Terminar</button></td>
             <?php
