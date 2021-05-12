@@ -13,7 +13,6 @@ fetch('../PHP/sessioncheck.php')
 function deleteP(id){
     let form = document.getElementById(id)
     let data = new FormData(form)
-    console.log(data.get('city'))
     let aux = confirm('¿Desea eliminar el proceso?')
     if(aux){
         fetch('../PHP/delete.php', {
@@ -29,7 +28,26 @@ function deleteP(id){
             }
         })
     }
-
 }
 
+function finishP(id){
+    let form = document.getElementById(id)
+    let data = new FormData(form)
+    aux = confirm('¿Desea eliminar el proceso?')
+    if(aux){
+        fetch('../PHP/finish.php', {
+            method: 'POST',
+            body: data
+        })
+        .then(res => res.json())
+        .then(dataF =>{
+            if(dataF === '1'){
+                window.location.reload()
+            }else{
+                alert('Error 500')
+            }
+        })
+    }
+
+}
 

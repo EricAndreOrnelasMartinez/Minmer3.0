@@ -205,7 +205,10 @@ session_start();
              <input type="hidden" name="id" value="<?php echo $show['ID_SQL']?>">
              <input type="hidden" name="city" value="<?php echo $city ?>">
              </form> </td>
-             <td><button type="button" class="terminar" value="soy botton2">Terminar</button></td>
+             <td><button type="button" onclick="finish(<?php echo $show['ID_SQL'] ?>T)">Terminar</button><form id="<?php  echo $show['ID_SQL']?>T">
+             <input type="hidden" name="id" value="<?php echo $show['ID_SQL']?>">
+             <input type="hidden" name="city" value="<?php echo $city ?>">
+             </form></td>
             <?php
             }else{
                 continue;
