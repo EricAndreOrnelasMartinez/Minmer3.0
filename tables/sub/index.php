@@ -1,6 +1,4 @@
 <?php 
-error_reporting(E_ALL);
-ini_set('display_errors','1');
 $city = $_GET['city'];
 $id = $_GET['id'];
 ?>
@@ -14,8 +12,8 @@ $id = $_GET['id'];
     <title>Subproceso - <?php echo $city ?></title>
 </head>
 <body>
-    <button type="button"><a href="../?city=CDMX">Volver</a></button>
-    <button type="button"><a href="./Nuevo/?city=<?php echo $city ?>&id=<?php echo $id ?>">Nuevo</a></button>
+<a href="../?city=CDMX"><button type="button">Volver</button></a>
+<a href="./Nuevo/?city=<?php echo $city ?>&id=<?php echo $id ?>"><button type="button">Nuevo</button></a>
     <section>
     <table id="main">
         <thead>
