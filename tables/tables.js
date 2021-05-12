@@ -10,21 +10,21 @@ fetch('../PHP/sessioncheck.php')
     }
 })
 
-function deleteP(id, city){
+function deleteP(id){
+    let form = document.getElementById(id)
+    let data = new FormData(form)
     let aux = confirm('¿Desea eliminar el proceso?')
-    let data = {id,city}
-    console.log(data)
     if(aux){
         fetch('../PHP/delete.php', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+            body: data
         })
-        .then(res => res.json())
-        .then(dataF => {
+        .then( res => res.json())
+        .then(dataF =>{
             alert(dataF)
         })
     }
+
 }
+
+
