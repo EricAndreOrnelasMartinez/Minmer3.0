@@ -208,6 +208,7 @@ session_start();
              <td><button type="button" onclick="finishP('<?php echo $show['ID_SQL'] ?>T')">Terminar</button><form id="<?php  echo $show['ID_SQL']?>T">
              <input type="hidden" name="id" value="<?php echo $show['ID_SQL']?>">
              <input type="hidden" name="city" value="<?php echo $city ?>">
+             <input type="hidden" name="total" value="<?php echo $total?>">
              </form></td>
             <?php
             }else{

@@ -43,6 +43,8 @@ function finishP(id){
         .then(dataF =>{
             if(dataF === '1'){
                 window.location.reload()
+            }else if(dataF === '2'){
+                alert('El proceso no está completado, no se pude terminar')
             }else{
                 alert('Error 500')
             }
