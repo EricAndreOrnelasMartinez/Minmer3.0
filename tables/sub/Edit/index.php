@@ -3,6 +3,7 @@
     $tem_id = round($_GET['id']);
     $idu = $_GET['idu'];
     $city = 'subP';
+    $cityR = $_GET['city'];
     $sqlFC = "SELECT FechaC FROM $city WHERE ID_SQL=".$tem_id." AND ID_sub=$idu";
     $resultFC = mysqli_query($con,$sqlFC);
     $sqlFE = "SELECT FechaE FROM $city WHERE ID_SQL=".$tem_id."  AND ID_sub=$idu";
@@ -49,7 +50,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../../CSS/style.css">
     <title>Editar</title>
 </head>
 <body>
@@ -82,7 +83,7 @@
     <input type="submit" value="Guardar">  
     <?php }; 
     ?>
-    <a href="../CDMX/"><button type="button">Volver</button></a>  
+    <a href="../?id=<?php echo $tem_id ?>&city=<?php echo $cityR ?>"><button type="button">Volver</button></a>  
     <h3 id="res"></h3>
 </form>
 <script src="edit.js"></script>
