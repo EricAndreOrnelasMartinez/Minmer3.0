@@ -22,7 +22,11 @@ function deleteP(id){
         })
         .then( res => res.json())
         .then(dataF =>{
-            alert(dataF)
+            if(dataF === '1'){
+                window.location.reload()
+            }else{
+                alert('Error 500')
+            }
         })
     }
 
