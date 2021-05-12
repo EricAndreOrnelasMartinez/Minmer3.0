@@ -182,4 +182,5 @@ $id = $_GET['id'];
     </table>
 </section>
 </body>
+<script src="./sub.js"></script>
 </html>
