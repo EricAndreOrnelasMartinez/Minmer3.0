@@ -158,7 +158,7 @@ form.addEventListener('submit', e  =>{
 })
 
 function querySelection(){
-    let aux1 = select.innerText
+    let aux1 = select.value
     console.log(aux1)
 }
 
