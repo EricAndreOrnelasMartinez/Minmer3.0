@@ -48,7 +48,7 @@ $id = $_GET['id'];
                 if($aux > 5){
                     ?>
                     <td><a href="./Nuevo/?city=<?php echo $city ?>&id=<?php echo $id ?>"><button type="button">Nuevo</button></a></td>
-                    <td><a href="../uploadE/">Subir Evidencia</a></td>
+                    <td><a href="../../uploadE/">Subir Evidencia</a></td>
                     <?php
                 }
                 ?>
@@ -138,7 +138,7 @@ $id = $_GET['id'];
             }
         ?>
         <tr class="<?php echo $color ?>">
-            <td><a href="../uploadE/uploads/<?php echo $show['Factura'] ?>.pdf">Ir</a></td>
+            <td><a href="../../uploadE/uploads/<?php echo $show['Factura'] ?>.pdf">Ir</a></td>
             <td><?php echo $total ?>%</td>
             <td><?php echo $show['ID_SQL'] ?></td>
             <td><?php echo $show['FechaC'] ?></td>
@@ -173,7 +173,7 @@ $id = $_GET['id'];
              </form> </td>
              <td><button type="button"onclick="finishP('<?php echo $show['ID_sub'] ?>T')">Terminar</button> <form id="<?php echo $show['ID_sub']?>T">
              <input type="hidden" name="idu" value="<?php echo $show['ID_sub'] ?>">
-             <input type="hidden" name="total" value="<?php echo $total ?>">
+             <input type="hidden" name="total" value="<?php echo $total?>">
              </form> </td>
             <?php
             }else{
