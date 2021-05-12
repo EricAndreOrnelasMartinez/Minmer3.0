@@ -21,7 +21,7 @@ function deleteP(id){
 function finishP(id){
     let form = document.getElementById(id)
     let data = new FormData(form)
-    aux = confirm('¿Desea eliminar el proceso?')
+    aux = confirm('¿Desea terminar el proceso?')
     if(aux){
         fetch('../../PHP/finishsub.php', {
             method: 'POST',

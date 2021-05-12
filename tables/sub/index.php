@@ -173,6 +173,7 @@ $id = $_GET['id'];
              </form> </td>
              <td><button type="button"onclick="finishP('<?php echo $show['ID_sub'] ?>T')">Terminar</button> <form id="<?php echo $show['ID_sub']?>T">
              <input type="hidden" name="idu" value="<?php echo $show['ID_sub'] ?>">
+             <input type="hidden" name="total" value="<?php echo $total ?>">
              </form> </td>
             <?php
             }else{
