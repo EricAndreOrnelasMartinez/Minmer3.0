@@ -48,6 +48,7 @@ form.addEventListener('submit', e  =>{
     </tr>`;
     for(i in data){
         let total = 0;
+        let color = '';
         if(isNotEmpty(data[i].ID_SQL)){
             total += 5
         }
@@ -111,8 +112,15 @@ form.addEventListener('submit', e  =>{
         if(data[i].Terminado === 1){
             total += 5
         }
-        output += `<tr>
-        <td><a href="../uploadE/uploads/${data[i].Factura}.pdf">
+        if(total < 80){
+            color = 'red'
+        }else if(total < 99){
+            color = 'yellow'
+        }else if(total === 100){
+            color = 'green'
+        }
+        output += `<tr class="${color}">
+        <td><a href="../uploadE/uploads/${data[i].Factura}.pdf">Ir</a></td>
         <td>${total}</td>
         <td>${data[i].ID_SQL}</td>
         <td>${data[i].FechaC}</td>
