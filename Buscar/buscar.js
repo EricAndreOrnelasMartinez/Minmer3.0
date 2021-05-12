@@ -156,7 +156,7 @@ form.addEventListener('submit', e  =>{
 
 function isNotEmpty(aux){
     let forReturn
-    if(!aux){
+    if(aux){
         forReturn = true
     }else{
         forReturn = false
