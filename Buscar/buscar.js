@@ -159,11 +159,11 @@ form.addEventListener('submit', e  =>{
 
 function querySelection(){
     let aux1 = select.value
-    if(aux1 === 'Fecha'){
+    if(aux1 === 'FechaC' || aux1 === 'FechaE'){
         query.type = 'date'
         query2.type = 'date'
     }else{
-        query.type = 'text'
+        query.type = 'text' 
         query2.type = 'hidden'
     }
 }
