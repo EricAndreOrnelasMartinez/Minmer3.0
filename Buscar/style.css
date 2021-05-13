@@ -6,7 +6,7 @@ form{
     background-color: indigo;
     padding:15px;
     padding-left: 30%;
-    display: fixed;
+    position: fixed;
 }
 select{
     background-color: black;
@@ -40,7 +40,7 @@ table{
 	text-align: left;
 	border-collapse: collapse;
 	width: 80%;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 th, td{
