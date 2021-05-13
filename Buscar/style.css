@@ -10,6 +10,9 @@ header{
     width: 100%;
     margin-top: 0;
 }
+section{
+    padding-top: 3rem;
+}
 form{
     background-color: indigo;
     padding:15px;
@@ -47,7 +50,6 @@ table{
 	text-align: left;
 	border-collapse: collapse;
 	width: 80%;
-    margin-top: 6rem;
 }
 
 th, td{
