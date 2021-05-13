@@ -6,6 +6,7 @@ form{
     background-color: indigo;
     padding:15px;
     padding-left: 30%;
+    display: fixed;
 }
 select{
     background-color: black;
@@ -32,5 +33,16 @@ h2{
     color: white;
     padding: 7px;
     text-align: center;
-    width: 100%;
+    width: 180%;
+}
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 80%;
+    margin-top: 5rem;
+}
+
+th, td{
+	padding: 10px;
 }

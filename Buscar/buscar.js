@@ -164,6 +164,7 @@ function querySelection(){
         query2.type = 'date'
     }else{
         query.type = 'text' 
+        query.value = ''
         query2.type = 'hidden'
     }
 }
