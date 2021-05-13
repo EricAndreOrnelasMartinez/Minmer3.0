@@ -16,4 +16,3 @@ echo json_encode("todo bien con '$query2' y con '$query'");
     }
 
 ?>
-//select * from CDMX WHERE FechaC BETWEEN '2020-10-15' AND '2020-10-19';
