@@ -7,7 +7,7 @@ $name = $_POST['nombre'];
 $last = $_POST['apellido'];
 $rowN = $_POST['rowN'];
 $nivel = $_POST['nivel'];
-$sql = "UPDATE users SET Mail='$mail', Nombre='$name', Apellido='$last', rowN=$rowN, Nivel=$nivel";
+$sql = "UPDATE users SET Mail='$mail', Nombre='$name', Apellido='$last', rowN=$rowN, Nivel=$nivel WHERE Mail='$mailB'";
 $res = mysqli_query($con, $sql);
 if($res){
     $_SESSION['mail'] = $mail;
