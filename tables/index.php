@@ -200,7 +200,7 @@ require_once('../PHP/dbcon.php');
             <td><?php echo $show['Terminado']?></td>
             <?php
             $aux = $_SESSION['nivel'];
-            if($aux == 5 || $aux == 6){ 
+            if($aux >= 3){ 
             ?>
              <td><a href="../Editar/?ids=<?php echo $show['ID_SQL']; ?>&city=<?php echo $city ?>"><button type="button" class="btn btn-succes">Modificar</button></a></td>
              <td><button type="button" onclick="deleteP(<?php echo $show['ID_SQL'] ?>)">Eliminar</button> <form id="<?php echo $show['ID_SQL'] ?>">
