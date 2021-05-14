@@ -8,7 +8,8 @@
     <?php  
     error_reporting(E_ALL);
     ini_set('display_errors','1');
-    
+    session_start();
+    $rowN = $_SESSION['rowN'];
     $con = mysqli_connect("localhost","root","Lasric.2018","Minmer2"); ?>
 </head>
 <body>
@@ -24,7 +25,7 @@
             </tr>
         </thead>
         <?php 
-            $sql = "SELECT * FROM Modifications";
+            $sql = "SELECT * FROM Modifications ORDER BY Day DESC LIMIT $rowN";
             $ans = mysqli_query($con,$sql);
             while($show = mysqli_fetch_array($ans)){
             ?>
