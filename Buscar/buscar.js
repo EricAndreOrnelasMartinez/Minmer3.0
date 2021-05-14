@@ -124,7 +124,7 @@ form.addEventListener('submit', e  =>{
         }
         output += `<tr class="${color}">
         <td><a href="../uploadE/uploads/${data[i].Factura}.pdf">Ir</a></td>
-        <td>${total}</td>
+        <td>${total}%</td>
         <td>${data[i].ID_SQL}</td>
         <td>${data[i].FechaC}</td>
         <td>${data[i].FechaE}</td>
