@@ -33,6 +33,7 @@ require_once('../PHP/dbcon.php');
                 <li><a href="../Buscar/">Buscar</a></li>
                 <li><a href="../Newuser/">Nuevo usuario</a></li>
                 <li><a href="../Modificaciones/">Modificaciones</a></li>
+                <li><a href="../Perfil">Perfil</a></li>
                 <?php
             }else if($aux <= 5 && $aux >= 3){
                 ?>
@@ -44,6 +45,7 @@ require_once('../PHP/dbcon.php');
                 <li><a href="./?city=QRO">QRO</a></li>
                 <li><a href="../logout.php">Log out</a></li>
                 <li><a href="../Buscar/">Buscar</a></li>
+                <li><a href="../Perfil">Perfil</a></li>
                 <?php
             }else{
                 header("Location:../Buscar/");
@@ -81,7 +83,7 @@ require_once('../PHP/dbcon.php');
                 <td>Terminado</td>
                 <?php 
                 $aux = $_SESSION['nivel'];
-                if($aux > 5){
+                if($aux > 3){
                     ?>
                     <td><a href="../Nuevo/"><button type="button">Nuevo</button></a></td>
                     <td><a href="../uploadE/">Subir Evidencia</a></td>

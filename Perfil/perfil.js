@@ -10,6 +10,6 @@ fetch('../PHP/getprofile.php')
         <input type="number" value="${dataF[i].rowN}"/>
         <input type="submit" value="Actualizar"/>
         `
-        
+        form.innerHTML = output
     }
 })
