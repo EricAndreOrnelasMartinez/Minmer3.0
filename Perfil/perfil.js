@@ -1,4 +1,5 @@
 const form = document.getElementById('main')
+const h2 = document.getElementById('res')
 fetch('../PHP/getprofile.php')
 .then(res => res.json())
 .then(dataF =>{
@@ -15,7 +16,6 @@ fetch('../PHP/getprofile.php')
         form.innerHTML = output
     }
 })
-const h2 = document.getElementById('res')
 form.addEventListener('submit', e =>{
     e.preventDefault()
     let data = new FormData(form)
