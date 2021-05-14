@@ -1,4 +1,4 @@
-fetch('../PHP/sessioncheck.php')
+fetch('../../PHP/sessioncheck.php')
 .then(res => res.json())
 .then(ans =>{
     let aux = ans
