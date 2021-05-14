@@ -5,8 +5,8 @@ fetch('../PHP/getprofile.php')
     for(i in dataF){
         let output = `
         <input type="text" value="${dataF[i].Mail}" name="mail"/>
-        <input type="text" value="${dataF[i].Nombre} name="nombre""/>
-        <input type="text" value="${dataF[i].Apellido} name="apellido"/>
+        <input type="text" value="${dataF[i].Nombre}" name="nombre"/>
+        <input type="text" value="${dataF[i].Apellido}" name="apellido"/>
         <input type="number" value="${dataF[i].rowN}" name="rowN"/>
         <input type="submit" value="Actualizar"/>
         `
