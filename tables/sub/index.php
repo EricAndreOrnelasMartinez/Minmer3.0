@@ -184,5 +184,5 @@ $id = $_GET['id'];
 </section>
 </body>
 <script src="./sub.js"></script>
-<script src="../../JS/session.js"></script>
+<script src="../../../JS/session.js"></script>
 </html>
