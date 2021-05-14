@@ -10,7 +10,6 @@ $sql = "UPDATE users SET Mail='$mail',Nombre='$name',Apellido='$last',rowN=$rowN
 $res = mysqli_query($con, $sql);
 if($res){
     $_SESSION['mail'] = $mail;
-    $_SESSION['nivel'] = $nivel;
     $_SESSION['rowN'] = $rowN;
     echo json_encode('1');
 }else{
