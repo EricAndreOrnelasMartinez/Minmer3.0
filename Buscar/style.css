@@ -54,3 +54,12 @@ table{
 th, td{
 	padding: 10px;
 }
+.red:hover{
+    background-color: rgb(155, 21, 21);
+}
+.yellow:hover{
+    background-color: rgb(187, 187, 11);
+}
+.green:hover{
+    background-color: green;
+}

@@ -25,7 +25,7 @@ $OE1 = $_POST['OE'];
 $Custodia1 = $_POST['Custodia'];
 $sqlUpdate = "UPDATE subP SET FechaC='$FechaC1',FechaE='$FechaE1',Operador='$Operador1',Placas='$Placas1',ID='$ID1',SO='$SO1',Factura='$Factura1',Cliente='$Cliente1',PZS='$PZS1',Caja='$Cajas1',Subtotal='$Subtotal1',Horario='$Horario1',Direccion='$Direccion1',Destino='$Destino1',Concepto='$Concepto1',Capacidad='$Capacidad1',Observaciones='$Observaciones1',OE='$OE1',Custodia='$Custodia1' WHERE ID_sub=$id;";
 $resulupdate = mysqli_query($con,$sqlUpdate) or die(mysqli_error($con2));
-$sqlInsert = "INSERT INTO Modifications(Mail,Hour,Day,City,RowN,Description) VALUE('$mail',current_time(),current_date(),'$city',$id,'Editado');";
+$sqlInsert = "INSERT INTO Modifications(Mail,Hour,Day,City,RowN,Description) VALUE('$mail',current_time(),current_date(),'sub',$id,'Editado');";
 $query = mysqli_query($con,$sqlInsert);
 if($resulupdate){
     echo json_encode('1');

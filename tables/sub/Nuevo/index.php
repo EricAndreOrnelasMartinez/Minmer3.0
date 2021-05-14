@@ -52,4 +52,6 @@ $id = $_GET['id'];
     <a href="../?city=<?php echo $city ?>&id=<?php echo $id ?>"><button type="button">Regresar</button></a>
 </body>
 <script src="./sub.js"></script>
+<script src="../../../JS/session.js"></script>
+<script src="../../../JS/secureacces.js"></script>
 </html>

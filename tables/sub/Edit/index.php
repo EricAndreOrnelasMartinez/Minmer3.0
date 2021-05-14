@@ -87,5 +87,7 @@
     <h3 id="res"></h3>
 </form>
 <script src="edit.js"></script>
+<script src="../../../JS/session.js"></script>
+<script src="../../../JS/secureacces.js"></script>
 </body>
 </html>
