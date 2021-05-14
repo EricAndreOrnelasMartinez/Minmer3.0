@@ -4,7 +4,7 @@ fetch('../PHP/getprofile.php')
 .then(res => res.json())
 .then(dataF =>{
     for(i in dataF){
-        let output = `
+        let output =+ `
         Email <input type="text" value="${dataF[i].Mail}" name="mail"/>
         Nombre <input type="text" value="${dataF[i].Nombre}" name="nombre"/>
         Apellido <input type="text" value="${dataF[i].Apellido}" name="apellido"/>
