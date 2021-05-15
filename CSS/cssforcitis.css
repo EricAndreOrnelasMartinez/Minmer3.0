@@ -84,11 +84,11 @@ button:hover{
     background-color: rgb(99, 201, 99);
 }
 .red{
-    transition: all 0.2s linear;
+    transition: all 1.0s linear;
 }
 .yellow{
-    transition: all 2.0s linear;
+    transition: all 1.0s linear;
 }
 .green{
-    transition: all 2.0 linear;
+    transition: all 1.0s linear;
 }
