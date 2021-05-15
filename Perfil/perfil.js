@@ -1,4 +1,5 @@
 const form = document.getElementById('main')
+const pasF = document.getElementById('pass')
 fetch('../PHP/getprofile.php')
 .then(res => res.json())
 .then(dataF =>{
@@ -33,4 +34,22 @@ form.addEventListener('submit', e =>{
             h2.className = 'bad'
         }
     })
+})
+
+pasF.addEventListener('submit', e =>{
+    e.preventDefault()
+    let data = new FormData(pasF)
+    if(data.getAll('new') === data.getAll('new2')){
+        console.log('bien')
+        fetch('../PHP/updatepass.php', {
+            method: 'POST',
+            body: data
+        })
+        .then(res = res.json())
+        .then(dataF =>{
+            console.log(dataF)
+        })
+    }else{
+        alert('Las contrseñas no son iguales')
+    }
 })
