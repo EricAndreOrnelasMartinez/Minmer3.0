@@ -1,5 +1,7 @@
 const form = document.getElementById('main')
 const pasF = document.getElementById('pass')
+const p1 = document.getElementById('p')
+const p2 = document.getElementById('p2')
 fetch('../PHP/getprofile.php')
 .then(res => res.json())
 .then(dataF =>{
@@ -39,7 +41,7 @@ form.addEventListener('submit', e =>{
 pasF.addEventListener('submit', e =>{
     e.preventDefault()
     let data = new FormData(pasF)
-    if(data.getAll('new') === data.getAll('new2')){
+    if(p1.value === p2.value){
         console.log('bien')
         fetch('../PHP/updatepass.php', {
             method: 'POST',
