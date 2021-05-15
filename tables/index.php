@@ -92,8 +92,10 @@ require_once('../PHP/dbcon.php');
             <td>-</td>
             </tr>
         </thead>
+        </table>
     </header>
     <section>
+        <table>
         <?php
         function validation($var){
             return !empty($var);
