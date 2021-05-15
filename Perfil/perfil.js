@@ -49,7 +49,15 @@ pasF.addEventListener('submit', e =>{
         })
         .then(res => res.json())
         .then(dataF =>{
-            console.log(dataF)
+            if(dataF === '1'){
+                alert('Contraseña actualizada')
+                pasF.reset()
+            } else if (dataF === '2'){
+                alert('La contraseña es incorrecta')
+                pasF.reset()
+            }else{
+                alert('Error 500')
+            }
         })
     }else{
         alert('Las contrseñas no son iguales')
