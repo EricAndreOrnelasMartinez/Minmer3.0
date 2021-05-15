@@ -47,7 +47,7 @@ pasF.addEventListener('submit', e =>{
             method: 'POST',
             body: data
         })
-        .then(res = res.json())
+        .then(res => res.json())
         .then(dataF =>{
             console.log(dataF)
         })
