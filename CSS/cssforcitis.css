@@ -78,8 +78,17 @@ button:hover{
     background-color: rgb(155, 21, 21);
 }
 .yellow:hover{
-    background-color: rgb(248, 252, 53);
+    background-color: rgb(247, 250, 56);
 }
 .green:hover{
     background-color: rgb(99, 201, 99);
+}
+.red{
+    transition: all 0.2s linear;
+}
+.yellow{
+    transition: all 2.0s linear;
+}
+.green{
+    transition: all 2.0 linear;
 }
