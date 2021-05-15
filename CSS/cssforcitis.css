@@ -50,6 +50,8 @@ thead{
 	background-color: black;
 	border-bottom: solid 5px purple;
 	color: white;
+    width: 150%;
+    
 }
 
 tr:nth-child(even){
