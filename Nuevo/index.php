@@ -97,6 +97,6 @@ if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name'
     include('readXLSX.php');
     //echo "working yet";
     readAndCDMX($_FILES['myfile']['name']);
-    header('Location:../CDMX');
+    header('Location:../tables/?city=CDMX');
 }
 ?>
