@@ -12,8 +12,11 @@ form.addEventListener('submit', e =>{
         let aux = data
         if(aux === '1'){
             window.location.assign('../')
+        }else if(aux === '2'){
+            h3.innerHTML = 'Llenar campos'
+            h3.className = 'bad'
         }else{
-            h3.innerHTML = 'correo existente'
+            h3.innerHTML = 'El correo ya existe'
         }
     }).catch(err =>{
         h3.innerHTML = 'correo existente'
