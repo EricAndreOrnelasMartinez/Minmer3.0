@@ -8,9 +8,9 @@
     <title>Upload</title>
 </head>
 <body>
-<h4>El nombre la evidencia debe ser el número de factura</h4>
 <form enctype="multipart/form-data" method="post">
-        Subir Evidencia PDF: <input type="file" name="myfile">
+<h4>El nombre la evidencia debe ser el número de factura</h4>    
+    Subir Evidencia PDF: <input type="file" name="myfile">
         <input type="submit" value="Subir">
         <button type="button"><a href="../tables/?city=CDMX">Volver</a></button>
     </form>
