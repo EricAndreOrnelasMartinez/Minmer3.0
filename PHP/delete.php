@@ -2,7 +2,6 @@
 require_once('dbcon.php');
 session_start();
 $mail = $_SESSION['mail'];
-$mail = 
 $id = $_POST['id'];
 $city = $_POST['city'];
 $sql = "DELETE FROM $city WHERE ID_SQL=$id"; 

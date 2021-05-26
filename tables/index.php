@@ -217,8 +217,7 @@ require_once('../PHP/dbcon.php');
                 continue;
             }
             ?>
-            <td><a href="./sub/?id=<?php echo $show['ID_SQL'] ?>&city=<?php echo $city ?>">SubProcesos</a></td>
-        </tr>
+            </tr>
         <?php }?>
     </table>
 </section>
